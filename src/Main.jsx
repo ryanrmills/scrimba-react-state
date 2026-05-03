@@ -1,7 +1,7 @@
 import React from "react"
 import IngredientsList from "./components/IngredientsList"
 import ClaudeRecipe from "./components/ClaudeRecipe"
-import { getRecipeFromChefClaude } from "./ai.js"
+import { getRecipeFromMock } from "./ai.js"
 
 export default function Main() {
     const [ingredients, setIngredients] = React.useState(
@@ -10,7 +10,7 @@ export default function Main() {
     const [recipe, setRecipe] = React.useState("")
 
     async function getRecipe() {
-        const recipeMarkdown = await getRecipeFromChefClaude(ingredients)
+        const recipeMarkdown = await getRecipeFromMock(ingredients)
         setRecipe(recipeMarkdown)
     }
 

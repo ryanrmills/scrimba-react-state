@@ -1,9 +1,7 @@
-import chefClaudeLogo from "./images/chef-claude-icon.png"
-
 export default function Header() {
     return (
         <header>
-            <img src={chefClaudeLogo}/>
+            <div className="chef-logo">CC</div>
             <h1>Chef Claude</h1>
         </header>
     )
